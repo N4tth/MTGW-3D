@@ -1,4 +1,3 @@
-
 const Monigote = {
     estado: {
       hambre: 50,
@@ -27,4 +26,3 @@ const Monigote = {
   };
   
   export default Monigote;
-  

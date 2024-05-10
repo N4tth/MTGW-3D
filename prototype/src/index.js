@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import Monigote from './components/pages/ms/monigote';
-import Room from './components/pages/ms/room';
+import Monigote from './components/pages/room/monigote';
+import Room from './components/pages/room/Room';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
