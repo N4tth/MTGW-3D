@@ -1,3 +1,4 @@
+/** 
 import React from 'react';
 import './App.css';
 import'./App'
@@ -5,6 +6,7 @@ import Room from './components/pages/room/Room';
 import React, { useEffect } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+ 
 
 function Room() {
   useEffect(() => {
@@ -44,4 +46,12 @@ function Room() {
   return null;
 }
 
-export default Room;
+export default Room; **/
+
+import RoutesMTGW3D from "./routes/RoutesMTGW3D";
+
+export default function App(){
+  return(
+    <RoutesMTGW3D/>
+  )
+}
