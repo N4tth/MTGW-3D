@@ -1,35 +1,10 @@
 import { useGLTF } from "@react-three/drei";
 import { useState } from "react";
+import { create } from "zustand";
+
+import useMonigoteStore from "./monigoteStore"
 
 export default function Monigote(props) {
-    const [monigote, setMonigote] = useState(() => {
-        return {
-            estado: {
-                hambre: 50,
-                higiene: 100,
-                diversion: 75,
-                felicidad: 80,
-                ambicion: 60,
-                antojo: ''
-            },
-
-            alimentar: function () {
-                this.estado.hambre -= 10;
-                this.estado.felicidad += 10;
-            },
-
-            banar: function () {
-                this.estado.higiene = 100;
-                this.estado.diversion -= 10;
-            },
-
-            jugar: function () {
-                this.estado.diversion += 20;
-                this.estado.hambre += 5;
-            },
-        }
-    })
-
     const { nodes, materials } = useGLTF('/assets/models/monigote-test.glb')
 
     return (
