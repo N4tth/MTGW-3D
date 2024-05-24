@@ -1,3 +1,5 @@
+import { create } from "zustand";
+
 const useMonigoteStore = create((set) => ({
     monigote: {
       hunger: 0,

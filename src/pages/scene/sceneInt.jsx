@@ -1,45 +1,45 @@
 import React from "react";
-import "./stylesScene.css"
+import styles from "./stylesScene.module.css"; // Importando como módulo CSS
 
-import useMonigoteStore from "../components/monigote/monigoteStore";
+import useMonigoteStore from "../../components/monigote/monigoteStore";
 
-function SceneInterface(){
-    const{monigote, setHunger, setHealth, setJoy} = useMonigoteStore();
+function SceneInt() {
+    const { monigote, setHunger, setHealth, setJoy } = useMonigoteStore();
 
     const handleFeed = () => {
-        setHunger(monigote.hunger -10);
+        setHunger(monigote.hunger - 10);
     };
-    const handlePlay= () => {
+
+    const handlePlay = () => {
         setJoy(monigote.joy + 10);
     };
+
     const handleBath = () => {
         setHealth(monigote.health + 10);
     };
 
     return (
-        /* si = ABR: Scene Interface*/
-        <div className="SceneInterface"> 
-            <header className="SI-header">
+        <div className={styles.SceneInterface}>
+            <header className={styles.SIHeader}>
                 Tu habitación
             </header>
-            <div className="SI-body">
-                <button className="icon-button">
-                    <img src="../public/assets/icons/homeIcon.png" alt="HOME"/>
-                </button>
-                <button className="icon-button">
-                    <img src="../public/assets/icons/listIcon.png" alt="List"/>
-                </button>
-                <button className="icon-button">
-                    <img src="../public/assets/icons/statIcon.png" alt="statistics"/>
-                </button>
+            <div className={styles.SIBody}>
+                {/* Establece el tamaño y la posición de "room" */}
+                <div className={styles.Room} style={{ width: '100vw', height: '100vh' }}>
+                    {/* Renderiza el objeto "room" aquí */}
+                </div>
+                {/* Establece el tamaño y la posición de "monigote" */}
+                <div className={styles.Monigote} style={{ width: '50px', height: '50px', position: 'absolute', bottom: '20px' }}>
+                    {/* Renderiza el objeto "monigote" aquí */}
+                </div>
             </div>
-            <footer className="SI-footer">
-                <button className="footer-button" onClick={handleFeed}>Alimentar</button>
-                <button className="footer-button" onClick={handlePlay}>Jugar</button>
-                <button className="footer-button" onClick={handleBath}>Lavar</button>
+            <footer className={styles.SIFooter}>
+                <button className={styles.FooterButton} onClick={handleFeed}>Alimentar</button>
+                <button className={styles.FooterButton} onClick={handlePlay}>Jugar</button>
+                <button className={styles.FooterButton} onClick={handleBath}>Lavar</button>
             </footer>
         </div>
     );
 }
 
-export default SceneInterface;
+export default SceneInt;
