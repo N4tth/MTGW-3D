@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./stylesScene.module.css"; // Importando como módulo CSS
+import styles from "./stylesSceneInt.css"; 
 
 import useMonigoteStore from "../../components/monigote/monigoteStore";
 
@@ -24,7 +24,6 @@ function SceneInt() {
                 Tu habitación
             </header>
             <div className={styles.SIBody}>
-                {/* Establece el tamaño y la posición de "room" */}
                 <div className={styles.Room} style={{ width: '100vw', height: '100vh' }}>
                     {/* Renderiza el objeto "room" aquí */}
                 </div>
