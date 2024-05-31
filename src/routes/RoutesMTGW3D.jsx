@@ -8,6 +8,7 @@ export default function RoutesMTGW3D (){
         <BrowserRouter>
             <Routes> 
                 <Route path="/" element={<Home/>}/>
+                {/*<Route path="/list" element={<list/>}/>*/}
                 <Route path="/scene" element={<Scene/>}/>
                 <Route path="/statistics" element={<Statistics/>}/>
                 {/* <Route path="*" element={<NotFound/>}/> */}
