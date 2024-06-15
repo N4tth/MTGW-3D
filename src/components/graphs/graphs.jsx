@@ -12,15 +12,15 @@ const Bar = ({ scale, position, color }) => {
 
 const Graphs = ({ firstBarScale }) => {
   const barScales = [
-    [firstBarScale, 1, 1], // Usamos la prop para definir la escala de la primera barra
-    [2, 1, 1], // Mediana en la dirección X
-    [1, 1, 1]  // Corta en la dirección X
+    [firstBarScale, 1, 1], 
+    [2, 1, 1], 
+    [1, 1, 1] 
   ];
 
   const barPositions = [
-    [firstBarScale / 2, -2, 0], // Ajustar la posición en función de la escala
-    [1, 0, 0],    // La mitad de la longitud (2/2) en X para centrar
-    [0.5, 2, 0]   // La mitad de la longitud (1/2) en X para centrar
+    [firstBarScale / 2, -2, 0], 
+    [1, 0, 0], 
+    [0.5, 2, 0] 
   ];
 
   const barColors = ['#FF9EAA', '#FFD0D0', '#80B9AD'];
@@ -43,10 +43,10 @@ const Graphs = ({ firstBarScale }) => {
         <PerspectiveCamera
           makeDefault  
           position={[0, 0, 7]}  
-          fov={65}  // Ángulo de visión
-          aspect={600 / 400}  // Relación de aspecto del lienzo
-          near={0.6}  // Distancia cercana del frustum
-          far={100}  // Distancia lejana del frustum
+          fov={65}  
+          aspect={600 / 400}  
+          near={0.6} 
+          far={100} 
         />
         
         <OrbitControls />
