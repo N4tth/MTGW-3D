@@ -31,7 +31,7 @@ export default function Statistics(props) {
   const handleBarScaleChange = (e) => {
     const newScale = parseFloat(e.target.value);
     if (!isNaN(newScale)) {
-      setFirstBarScale(newScale); // Actualizar la escala de la primera barra
+      setFirstBarScale(newScale);
     }
   };
 

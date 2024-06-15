@@ -1,9 +1,8 @@
-// components/Task.jsx
+
 import React, { useEffect } from 'react';
-import useTaskStore from './taskStore';  // Asegúrate de que taskStore está en la ruta correcta
+import useTaskStore from './taskStore'; 
 
 function TaskComponent() {
-  // Obtén las tareas y las acciones del store usando destructuración con un valor por defecto para tasks
   const { tasks = [], addTask, removeTask, updateTask } = useTaskStore(state => ({
     tasks: state.tasks,
     addTask: state.addTask,
@@ -11,7 +10,6 @@ function TaskComponent() {
     updateTask: state.updateTask
   }));
 
-  // Efecto para agregar tareas de ejemplo después de 1 segundo
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       addTask({
@@ -36,11 +34,11 @@ function TaskComponent() {
       });
     }, 1000);
 
-    // Limpiar el timeout si el componente se desmonta
+
     return () => clearTimeout(timeoutId);
   }, [addTask]);
 
-  // Función para calcular la experiencia basada en la dificultad
+
   const calculateExp = (difficulty) => {
     switch (difficulty) {
       case 'Alta':
@@ -54,11 +52,11 @@ function TaskComponent() {
     }
   };
 
-  // Función para crear una nueva tarea
+
   const createTask = (priorityTask, difficulty, complete, repetition, rewards) => {
     return {
-      id: tasks.length + 1,  // Genera un ID único basado en la longitud de la lista
-      text: `Task ${tasks.length + 1}`,  // Asigna un nombre temporal
+      id: tasks.length + 1,  
+      text: `Task ${tasks.length + 1}`, 
       priorityTask,
       difficulty,
       complete,
@@ -68,7 +66,7 @@ function TaskComponent() {
     };
   };
 
-  // Manejador para agregar una nueva tarea al hacer clic en el botón
+
   const handleAddTask = () => {
     const newTask = createTask('Media', 'Media', false, 'week', '100 puntos');
     addTask(newTask);
@@ -83,7 +81,7 @@ function TaskComponent() {
             {task.priorityTask} - {task.difficulty} - {task.repetition} - {task.exp}
             <button onClick={() => removeTask(task.id)}>Eliminar</button>
             <button onClick={() => updateTask(task.id, { complete: !task.complete })}>
-              {task.complete ? 'Marcar Incompleta' : 'Marcar Completa'}
+              {task.complete ? 'Incompleta' : 'Completa'}
             </button>
           </li>
         ))}

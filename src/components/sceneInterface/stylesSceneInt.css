@@ -59,10 +59,10 @@
 
 .FooterButtonsContainer {
   position: fixed;
-  bottom: 20px; /* Ajusta la posición verticalmente */
-  left: 50%; /* Centra horizontalmente */
+  bottom: 20px; 
+  left: 50%; 
   transform: translateX(-50%);
-  z-index: 9999; /* Asegura que esté por encima de otros elementos */
+  z-index: 9999; 
 }
 
 .FooterButton {
