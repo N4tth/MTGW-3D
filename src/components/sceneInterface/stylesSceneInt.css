@@ -37,23 +37,43 @@
     width: 50px;
     height: 50px;
   }
-  
-  .SIFooter {
-    display: flex;
-    justify-content: space-around;
-    pointer-events: auto;
-  }
-  
   .FooterButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
     background-color: #007bff;
     color: white;
-    border-radius: 5px;
-  }
-  
-  .FooterButton:hover {
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.FooterButton:hover {
     background-color: #0056b3;
-  }
+}
+
+.SIFooter {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.FooterButtonsContainer {
+  position: fixed;
+  bottom: 20px; /* Ajusta la posición verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%);
+  z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+.FooterButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.FooterButton:hover {
+  background-color: #0056b3;
+}
